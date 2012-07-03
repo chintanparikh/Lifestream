@@ -5,8 +5,10 @@ var get_gists = function (user) {
       url: url,
       dataType: 'jsonp',
 
-      success: function(data) {
-      console.log(data);
-    }
+      success: function(results) {
+        $.each(results.data, function(key, gist) {
+          console.log(gist)
+        });
+      }
   });
 };
